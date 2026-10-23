@@ -1,0 +1,11 @@
+# Obsidian 运行时状态与缓存（不同设备各自独立，不该同步）
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/appearance.json
+
+# 系统垃圾文件
+.DS_Store
+.Trash/
+.trash/
+Thumbs.db

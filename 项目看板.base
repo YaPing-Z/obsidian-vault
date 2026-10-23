@@ -1,0 +1,20 @@
+filters:
+  and:
+    - file.inFolder("10 Projects")
+properties:
+  status:
+    displayName: 状态
+  deadline:
+    displayName: 截止日期
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - status
+      - deadline
+  - type: kanban
+    name: 看板
+    groupBy:
+      property: status
+      direction: ASC

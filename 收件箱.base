@@ -1,0 +1,20 @@
+filters:
+  and:
+    - file.inFolder("00 Inbox")
+properties:
+  created:
+    displayName: 创建日期
+  source:
+    displayName: 来源
+  tags:
+    displayName: 标签
+views:
+  - type: table
+    name: 待整理
+    order:
+      - file.name
+      - created
+      - source
+      - tags
+  - type: list
+    name: 清单

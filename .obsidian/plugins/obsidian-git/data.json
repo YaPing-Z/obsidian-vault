@@ -1,0 +1,18 @@
+{
+  "commitMessage": "vault backup: {{date}}",
+  "autoSaveInterval": 10,
+  "autoPushInterval": 10,
+  "autoPullInterval": 10,
+  "autoPullOnBoot": true,
+  "syncMethod": "merge",
+  "disablePush": false,
+  "pullBeforePush": true,
+  "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
+  "listChangedFilesInMessage": true,
+  "showStatusBar": true,
+  "updateSubmodules": false,
+  "submoduleRecurseCheckout": true,
+  "disablePopups": false,
+  "refreshSourceControl": true,
+  "refreshSourceControlTimer": 7000
+}

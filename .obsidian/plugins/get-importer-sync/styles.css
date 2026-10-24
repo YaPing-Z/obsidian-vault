@@ -226,3 +226,239 @@ Get笔记 Importer - 优化样式
         gap: 8px;
     }
 }
+.get-settings-tabs-container {
+    display: inline-flex;
+    background: var(--background-secondary);
+    border-radius: var(--radius-m);
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.get-settings-tabs-container button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: var(--radius-s);
+    padding: 6px 16px;
+    font-size: var(--font-ui-small);
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.get-settings-tabs-container button.is-active {
+    background: var(--background-primary);
+    color: var(--text-normal);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--interactive-accent);
+}
+
+.get-settings-content .get-importer-setting-section:first-child h3 {
+    margin-top: 0;
+    padding-top: 8px;
+}
+.markdown-source-view .cm-line.getnote-hidden-aggregate-marker {
+    display: none !important;
+}
+
+/* ============================================================
+   授权 Tab (license-renderer) 样式
+   ============================================================ */
+
+.flomo-license-section h2 {
+    margin: 0 0 var(--size-4-4);
+    font-size: var(--font-ui-large);
+}
+
+.flomo-license-panel {
+    padding: var(--size-4-2) 0;
+}
+
+.flomo-license-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-4-2);
+    padding: 6px 14px;
+    border-radius: var(--radius-s);
+    font-weight: var(--font-semibold);
+    font-size: var(--font-ui-small);
+    margin-bottom: var(--size-4-4);
+}
+
+.flomo-license-status-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.flomo-license-status--active {
+    background: hsla(145, 63%, 42%, 0.12);
+    color: hsl(145, 63%, 38%);
+    border: 1px solid hsla(145, 63%, 42%, 0.25);
+}
+
+.flomo-license-status--trial {
+    background: hsla(35, 92%, 50%, 0.12);
+    color: hsl(30, 80%, 42%);
+    border: 1px solid hsla(35, 92%, 50%, 0.25);
+}
+
+.flomo-license-status--expired {
+    background: hsla(0, 72%, 51%, 0.12);
+    color: hsl(0, 72%, 45%);
+    border: 1px solid hsla(0, 72%, 51%, 0.25);
+}
+
+.flomo-license-label {
+    display: block;
+    font-weight: var(--font-medium);
+    margin: var(--size-4-3) 0 var(--size-4-1);
+    font-size: var(--font-ui-small);
+    color: var(--text-muted);
+}
+
+.flomo-license-row {
+    display: flex;
+    gap: var(--size-4-2);
+    align-items: center;
+}
+
+.flomo-license-input {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: var(--font-ui-small);
+    font-family: var(--font-monospace);
+    letter-spacing: 0.5px;
+}
+
+.flomo-license-input:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px hsla(var(--interactive-accent-hsl), 0.2);
+}
+
+.flomo-license-input[readonly] {
+    background: var(--background-secondary);
+    color: var(--text-muted);
+}
+
+.flomo-license-btn {
+    white-space: nowrap;
+    padding: 6px 14px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    font-size: var(--font-ui-small);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.flomo-license-btn:hover {
+    background: var(--background-modifier-hover);
+    border-color: var(--interactive-accent);
+}
+
+.flomo-license-btn--validate {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.flomo-license-btn--validate:hover {
+    filter: brightness(1.1);
+}
+
+.flomo-license-desc {
+    margin-top: var(--size-4-4);
+    padding: var(--size-4-3) var(--size-4-4);
+    background: var(--background-secondary);
+    border-radius: var(--radius-m);
+    font-size: var(--font-ui-small);
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.flomo-license-desc strong {
+    color: var(--text-accent);
+}
+
+.flomo-license-desc ol {
+    margin: var(--size-4-2) 0 0;
+    padding-left: 1.5em;
+}
+
+.flomo-license-desc li {
+    margin-bottom: var(--size-4-1);
+}
+
+.flomo-license-desc code {
+    padding: 1px 5px;
+    background: var(--background-primary-alt);
+    border-radius: var(--radius-s);
+    font-size: 0.9em;
+}
+
+.flomo-license-qr-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: var(--size-4-4);
+    align-items: center;
+}
+
+.flomo-license-qr-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flomo-license-qr-title {
+    font-weight: var(--font-medium);
+    font-size: var(--font-ui-small);
+    margin-bottom: var(--size-4-2);
+    color: var(--text-muted);
+}
+
+.flomo-license-qr-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-s);
+}
+
+.flomo-license-qr-img--appreciation,
+.flomo-license-qr-img--wechat {
+    max-width: 100%;
+}
+
+.flomo-license-qr-img.is-hidden {
+    display: none;
+}
+
+.flomo-license-qr-error {
+    color: var(--text-error);
+    font-size: var(--font-ui-small);
+    padding: var(--size-4-2);
+}
+
+@media (max-width: 600px) {
+    .flomo-license-qr-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .flomo-license-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flomo-license-btn {
+        width: 100%;
+    }
+}

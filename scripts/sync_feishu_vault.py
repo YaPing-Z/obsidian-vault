@@ -94,10 +94,12 @@ def main():
         if title is None:
             print(f"  [跳过] 拉取失败: {title_from_node} ({obj})")
             continue
-        final_title = title or title_from_node
-        if not final_title:
-            final_title = obj
-        h = hashlib.md5((title + "\n" + body).encode("utf-8")).hexdigest()
+        final_title = title or title_from_node or obj
+        # 节点 title 有时包含整篇正文（多行），取首行作为标题与文件名
+        display_title = final_title.split("\n", 1)[0].strip()
+        if not display_title:
+            display_title = obj
+        h = hashlib.md5((display_title + "\n" + body).encode("utf-8")).hexdigest()
         if state.get(obj) == h:
             continue  # 无变化
         md = (
@@ -106,15 +108,20 @@ def main():
             f"source: https://feishu.cn/docx/{obj}\n"
             f"updated: {datetime.date.today().isoformat()}\n"
             f"---\n\n"
-            f"# {final_title}\n\n{body}\n"
+            f"# {display_title}\n\n{body}\n"
         )
-        fname = re.sub(r'[\\/:*?"<>|]', "_", final_title) + ".md"
+        # 文件名：去除非法字符（含换行/控制符），空白折叠并截断，避免超长
+        safe = re.sub(r'[\x00-\x1f\x7f\\/:*?"<>|]', "_", display_title)
+        safe = re.sub(r'\s+', " ", safe).strip()
+        if not safe:
+            safe = obj
+        fname = safe[:120].rstrip("_.") + ".md"
         path = os.path.join(OUT_DIR, fname)
         with open(path, "w", encoding="utf-8") as f:
             f.write(md)
         state[obj] = h
-        changed.append((final_title, fname))
-        print(f"  [更新] {final_title} -> {fname}")
+        changed.append((display_title, fname))
+        print(f"  [更新] {display_title} -> {fname}")
 
     save_state(state)
 

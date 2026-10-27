@@ -1,0 +1,175 @@
+{
+  "settingsSchemaVersion": 2,
+  "pullState": {
+    "playwright": {
+      "accounts": {
+        "legacy": {
+          "lastSyncTime": 0,
+          "disabledReason": null,
+          "failureCount": 0,
+          "requestTotals": {
+            "list": 0,
+            "detail": 0,
+            "attachment": 0,
+            "externalDownload": 0,
+            "retry": 0
+          },
+          "retryQueue": []
+        }
+      }
+    },
+    "openapi": {
+      "accounts": {}
+    },
+    "web": {
+      "accounts": {}
+    }
+  },
+  "push": {
+    "openapi": {
+      "enabled": false,
+      "folder": "",
+      "trigger": "manual",
+      "conflictStrategy": "mark_conflict",
+      "syncDelete": true,
+      "deletedNotes": [],
+      "pathToUidCache": {},
+      "lastUploadAt": 0,
+      "autoSyncDisabledForUpload": null,
+      "uploadImages": false,
+      "syncParentChild": true,
+      "remoteDeletePolicy": "notify",
+      "bidirectionalDelete": false,
+      "lastSyncIds": [],
+      "accounts": {
+        "openapi:4e2b219b": {
+          "enabled": false,
+          "folder": "",
+          "trigger": "manual",
+          "conflictStrategy": "mark_conflict",
+          "syncDelete": true,
+          "deletedNotes": [],
+          "pathToUidCache": {},
+          "lastUploadAt": 0,
+          "autoSyncDisabledForUpload": null,
+          "uploadImages": false,
+          "syncParentChild": true,
+          "remoteDeletePolicy": "notify",
+          "bidirectionalDelete": false,
+          "lastSyncIds": []
+        }
+      }
+    },
+    "web": {
+      "enabled": false,
+      "folder": "",
+      "pendingCreates": [],
+      "accounts": {
+        "__legacy__": {
+          "enabled": false,
+          "folder": "",
+          "pendingCreates": []
+        }
+      }
+    }
+  },
+  "quotaState": {
+    "version": 1,
+    "buckets": {
+      "openapi:default": {
+        "cache": null,
+        "lastCalibratedAt": 0,
+        "stale": false,
+        "exhausted": {}
+      },
+      "playwright-local": {
+        "cache": null,
+        "lastCalibratedAt": 0,
+        "stale": false,
+        "exhausted": {}
+      },
+      "openapi:4e2b219b": {
+        "cache": null,
+        "lastCalibratedAt": 0,
+        "stale": false,
+        "exhausted": {}
+      },
+      "web:84c3d843": {
+        "cache": null,
+        "lastCalibratedAt": 0,
+        "stale": false,
+        "exhausted": {}
+      }
+    }
+  },
+  "getTarget": "get",
+  "memoTarget": "notes",
+  "optionsMoments": "copy_with_link",
+  "optionsCanvas": "copy_with_content",
+  "expOptionAllowbilink": true,
+  "canvasSize": "M",
+  "mergeByDate": false,
+  "autoSyncOnStartup": false,
+  "autoSyncInterval": false,
+  "autoSyncIntervalMinutes": 60,
+  "lastSyncTime": 0,
+  "syncedMemoIds": [],
+  "attachmentImport": {
+    "image": true,
+    "audio": true,
+    "video": true,
+    "document": true
+  },
+  "syncChannel": "web",
+  "openApi": {
+    "clientId": "",
+    "apiKey": "",
+    "syncMode": "incremental",
+    "requestGapMs": 600,
+    "authUseRawKey": true,
+    "syncParentChild": true
+  },
+  "webApi": {
+    "token": "",
+    "syncMode": "incremental",
+    "lastCursor": "0",
+    "downloadMarkdown": false,
+    "syncParentChild": true
+  },
+  "syncHistory": [],
+  "autoSyncDisabledReason": null,
+  "autoSyncFailureCount": 0,
+  "subdirNames": {
+    "knowledge": "知识库",
+    "subscribedKnowledge": "订阅知识库",
+    "blogger": "订阅博主",
+    "lives": "直播课",
+    "attachments": "get attachment"
+  },
+  "bidirectional": {
+    "enabled": false,
+    "folder": "",
+    "trigger": "manual",
+    "conflictStrategy": "mark_conflict",
+    "syncDelete": true,
+    "deletedNotes": [],
+    "pathToUidCache": {},
+    "lastUploadAt": 0,
+    "autoSyncDisabledForUpload": null,
+    "uploadImages": false,
+    "syncParentChild": true,
+    "remoteDeletePolicy": "notify",
+    "bidirectionalDelete": false,
+    "lastSyncIds": []
+  },
+  "recall": {
+    "enableRealtime": false,
+    "debounceMs": 3000,
+    "topK": 5,
+    "defaultScope": {
+      "type": "global"
+    }
+  },
+  "hideAggregateMarkers": true,
+  "debugWebPush": false
+}

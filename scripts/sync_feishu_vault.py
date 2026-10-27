@@ -129,11 +129,11 @@ def main():
         print("无新增/变更，跳过提交。")
         return
 
-    run(f'{GIT} -C "{VAULT}" add -A')
+    run(f'"{GIT}" -C "{VAULT}" add -A')
     msg = "自动同步飞书知识库 ObsidianVault：" + "、".join(t for t, _ in changed)
-    rc = run(f'{GIT} -C "{VAULT}" commit -m "{msg}"')
+    rc = run(f'"{GIT}" -C "{VAULT}" commit -m "{msg}"')
     if rc.returncode == 0:
-        run(f'{GIT} -C "{VAULT}" push')
+        run(f'"{GIT}" -C "{VAULT}" push')
         print(f"已提交并推送 {len(changed)} 篇。")
     else:
         print("提交无变化或失败。")

@@ -176,7 +176,7 @@
       ]
     },
     "deepseek": {
-      "enabled": false,
+      "enabled": true,
       "codeMode": false,
       "presetPlugins": "",
       "cliPath": "",

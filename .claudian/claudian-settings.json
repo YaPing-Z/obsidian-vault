@@ -26,15 +26,15 @@
       "outputStyle": null,
       "promptSuggestions": false,
       "discoveredOutputStyles": [],
-      "cliPath": "",
+      "cliPath": "C:\\Users\\Yaping\\.workbuddy\\binaries\\node\\versions\\22.22.2-6\\claude.cmd",
       "cliPathsByHost": {},
       "loadUserSettings": true,
       "enableChrome": false,
       "visibleModels": [],
       "modelAliases": {},
-      "environmentVariables": "",
-      "environmentHash": "",
-      "sessionEnvironmentHash": "",
+      "environmentVariables": "ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic\nANTHROPIC_API_KEY=sk-98cbf4debf0b453dbd8bc7e5d9147102\nANTHROPIC_MODEL=deepseek-v4-flash",
+      "environmentHash": "runtime-input:v1:3e5f3ef0e27cdc546e9747058857e15200152b4f57daf5f0e6e362d181667e43",
+      "sessionEnvironmentHash": "runtime-input:v1:ad6687646f386b48e9448ed00438af35bab1898ce1a3293504955085f3ad75bb",
       "selectedModels": []
     },
     "codex": {
@@ -219,7 +219,10 @@
     }
   },
   "settingsProvider": "claude",
-  "lastSelectedChatModel": null,
+  "lastSelectedChatModel": {
+    "providerId": "codex",
+    "model": "openai-codex/gpt-6-luna"
+  },
   "inlineEditModel": null,
   "savedProviderModel": {},
   "savedProviderEffort": {},

@@ -125,3 +125,9 @@
 - stderr 报错：`lookup accounts.feishu.cn: no such host`（DNS 解析失败）→ `uat-client` token refresh 失败、`clock synchronization failed`；另有 Git-Bash 环境提示 `/etc/msystem.d/MSYS: No such file or directory`（无害）。
 - 根因：**沙箱/网络环境问题**，无法解析飞书域名，导致 lark-cli 登录态无法刷新、节点列表拉取失败。脚本以 0 节点退出并跳过了提交（未产生变更、未推送）。
 - 按任务约定（网络/代理问题仅记录原因、不反复重试），本次未重试、未做任何提交/推送。待网络恢复后下一轮运行应恢复正常（节点数回到 5）。
+
+## 2026-10-30 19:16 (GMT+8)
+- 运行 `scripts/sync_feishu_vault.py`：成功，退出码 0。
+- 知识库 docx 节点数：5（与基线一致，上轮网络故障已恢复）。
+- 结果：**无新增/变更**，跳过 git 提交与推送（正常结束，状态文件未变更）。
+- 未产生任何交付文件。

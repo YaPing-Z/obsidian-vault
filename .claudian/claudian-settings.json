@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "normal",
-  "model": "haiku",
+  "model": "openai-codex/gpt-6-luna",
   "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
@@ -176,7 +176,7 @@
       ]
     },
     "deepseek": {
-      "enabled": true,
+      "enabled": false,
       "codeMode": false,
       "presetPlugins": "",
       "cliPath": "",
@@ -224,18 +224,23 @@
       "selectedModels": []
     }
   },
-  "settingsProvider": "deepseek",
+  "settingsProvider": "codex",
   "lastSelectedChatModel": {
     "providerId": "codex",
     "model": "openai-codex/gpt-6-luna"
   },
   "inlineEditModel": null,
-  "savedProviderModel": {},
-  "savedProviderEffort": {},
+  "savedProviderModel": {
+    "codex": "openai-codex/gpt-6-luna"
+  },
+  "savedProviderEffort": {
+    "codex": "high"
+  },
   "savedProviderServiceTier": {},
   "savedProviderPermissionMode": {
     "claude": "auto",
-    "deepseek": "normal"
+    "deepseek": "normal",
+    "codex": "normal"
   },
   "pendingProviderSessionInvalidations": {},
   "enableAutoScroll": true,

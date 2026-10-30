@@ -22,7 +22,7 @@
   "locale": "zh-CN",
   "providerConfigs": {
     "claude": {
-      "enabled": true,
+      "enabled": false,
       "outputStyle": null,
       "promptSuggestions": false,
       "discoveredOutputStyles": [
@@ -224,7 +224,7 @@
       "selectedModels": []
     }
   },
-  "settingsProvider": "claude",
+  "settingsProvider": "deepseek",
   "lastSelectedChatModel": {
     "providerId": "codex",
     "model": "openai-codex/gpt-6-luna"
@@ -234,7 +234,8 @@
   "savedProviderEffort": {},
   "savedProviderServiceTier": {},
   "savedProviderPermissionMode": {
-    "claude": "auto"
+    "claude": "auto",
+    "deepseek": "normal"
   },
   "pendingProviderSessionInvalidations": {},
   "enableAutoScroll": true,

@@ -38,7 +38,7 @@
       "selectedModels": []
     },
     "codex": {
-      "enabled": false,
+      "enabled": true,
       "safeMode": "workspace-write",
       "cliPath": "",
       "cliPathsByHost": {},
@@ -56,7 +56,7 @@
       "selectedModels": []
     },
     "deepseek": {
-      "enabled": true,
+      "enabled": false,
       "codeMode": false,
       "presetPlugins": "",
       "cliPath": "",

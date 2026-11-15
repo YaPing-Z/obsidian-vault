@@ -281,3 +281,10 @@
 - 知识库 docx 节点数：5（与基线一致）。
 - 结果：**无新增/变更**，跳过 git 提交与推送（正常结束，状态文件未变更）。
 - 未产生任何交付文件。
+
+## 2026-11-15 18:18 (GMT+8)
+- 运行 `scripts/sync_feishu_vault.py`：退出码 0，但**实际为飞书登录态失效（非正常无变更）**。
+- 知识库 docx 节点数：**0**（异常，基线为 5）—— lark-cli 节点枚举失败被计为 0。
+- stderr 报错：`uat-client: refresh_token expired ... clearing`；lark-cli 返回 `authentication / token_missing / need_user_authorization (user: ou_d63bc65bff2d46dfa3ece72fefdd672d)`，提示需 `lark-cli auth login` 设备码授权。`[ERR] 列出节点失败`。另有 `/etc/msystem.d/MSYS: No such file or directory`（Git-Bash 环境提示，无害）。
+- 根因：**飞书 user 登录态的 refresh_token 过期**，需用户重新授权，自动化无法在无交互下完成设备码登录。
+- 按任务约定（登录失效仅记录原因、不反复重试），本次未重试、未做任何提交/推送、未产生交付文件。待用户重新登录 lark-cli 后，下一轮应恢复正常（节点数回到 5）。

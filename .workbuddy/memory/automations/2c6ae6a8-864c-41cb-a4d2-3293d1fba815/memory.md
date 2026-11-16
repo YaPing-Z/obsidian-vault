@@ -294,3 +294,9 @@
 - 知识库 docx 节点数：**0**（异常，基线为 5）—— lark-cli 节点枚举失败被计为 0。
 - stderr：`authentication / token_missing / need_user_authorization (user: ou_d63bc65bff2d46dfa3ece72fefdd672d)`，`[ERR] 列出节点失败`；另有 `/etc/msystem.d/MSYS: No such file or directory`（Git-Bash 环境提示，无害）。
 - 按任务约定（登录失效仅记录原因、不反复重试），本次未重试、未做任何提交/推送、未产生交付文件。需用户执行 `lark-cli auth login` 完成设备码授权后，下一轮才能恢复同步。
+
+## 2026-11-16 15:18 (GMT+8)
+- 运行 `scripts/sync_feishu_vault.py`：退出码 0，但**实际仍为飞书登录态失效（非正常无变更）**，与 11-15 两轮相同，用户尚未重新授权。
+- 知识库 docx 节点数：**0**（异常，基线为 5）—— lark-cli 节点枚举失败被计为 0。
+- stderr/输出：`[ERR] 列出节点失败`；`authentication / token_missing / need_user_authorization (user: ou_d63bc65bff2d46dfa3ece72fefdd672d)`，提示需设备码授权；另有 `/etc/msystem.d/MSYS: No such file or directory`（Git-Bash 环境提示，无害）。脚本打印"无新增/变更，跳过提交"。
+- 按任务约定（登录失效仅记录原因、不反复重试），本次未重试、未做任何提交/推送、未产生交付文件。需用户执行 `lark-cli auth login` 完成设备码授权后，下一轮才能恢复同步。
